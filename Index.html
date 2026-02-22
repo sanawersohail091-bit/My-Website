@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sanawer Sohail - Customer Service Representative & Team Supervisor Portfolio. Expert in CRM, Team Management, and Digital Marketing.">
+    <meta name="keywords" content="Sanawer Sohail, Customer Service, Team Supervisor, Digital Marketing, Karachi, Portfolio">
+    <meta name="author" content="Sanawer Sohail">
+    <title>Sanawer Sohail | Customer Service Professional</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a', // Slate 900
+                        secondary: '#3b82f6', // Blue 500
+                        accent: '#06b6d4', // Cyan 500
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations & Styles */
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Mesh */
+        .mesh-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
+                        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 25%);
+            animation: pulseMesh 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseMesh {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Certificate Badge Style */
+        .cert-badge {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-left: 4px solid #3b82f6;
+        }
+
+        /* Typing Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Dynamic Background -->
+    <div class="mesh-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-serif font-bold text-white tracking-tighter">SS<span class="text-cyan-400">.</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills & Certs</a>
+                        <a href="#experience" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#projects" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#contact" class="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-cyan-500/30">Contact Me</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden glass border-t border-white/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#contact" class="text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <p class="text-cyan-400 font-medium tracking-widest uppercase mb-4">Welcome to my portfolio</p>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Sanawer Sohail</span>
+                </h1>
+                <div class="h-12 md:h-16 flex justify-center items-center">
+                    <h2 class="text-2xl md:text-4xl text-gray-300 font-light typing-cursor" id="typewriter"></h2>
+                </div>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
+                    Results-driven Customer Service Representative and Team Supervisor with 5+ years of experience in CRM, operations, and team leadership.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#contact" class="px-8 py-3 rounded-full bg-white text-slate-900 font-bold hover:bg-gray-200 transition-all transform hover:scale-105 shadow-lg shadow-white/10">
+                        Hire Me
+                    </a>
+                    <a href="#experience" class="px-8 py-3 rounded-full border border-gray-600 text-white font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all">
+                        View Experience
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/4 left-10 w-24 h-24 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-10 w-32 h-32 bg-blue-600/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-800">
+                        <!-- Placeholder for Profile Image -->
+                        <img src="Sanawer.png" alt="Sanawer Sohail" class="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-900 to-transparent">
+                            <div class="flex items-center gap-3 text-white">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="font-medium">Available for opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">About Me</h2>
+                    <div class="space-y-4 text-gray-400 leading-relaxed">
+                        <p>
+                            I am a dedicated professional based in <span class="text-white font-medium">North Nazimabad, Karachi</span>, with a solid background in Computer Science (Intermediate) and extensive experience in the BPO and Marketing industries.
+                        </p>
+                        <p>
+                            My journey began as a Customer Service Representative at Hello International Marketing Solution, where I honed my skills in communication and problem-solving. I quickly progressed to a Processing Team Member, managing critical databases and operational workflows.
+                        </p>
+                        <p>
+                            Currently, I serve as a <span class="text-cyan-400 font-medium">Supervisor/Floor Manager</span> at Explosion Services, leading a team of representatives to achieve performance excellence and deliver outstanding client satisfaction.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="p-4 glass-card rounded-xl">
+                            <h4 class="text-2xl font-bold text-white">5+</h4>
+                            <p class="text-sm text-gray-400">Years Experience</p>
+                        </div>
+                        <div class="p-4 glass-card rounded-xl">
+                            <h4 class="text-2xl font-bold text-white">100%</h4>
+                            <p class="text-sm text-gray-400">Commitment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="skills" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Skills & Certifications</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">A comprehensive overview of my technical proficiencies and verified certifications.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card Template -->
+                
+                <!-- Databases -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-database text-6xl text-cyan-400"></i>
+                    </div>
+                    <div class="cert-badge p-4 rounded-lg mb-4 inline-block">
+                        <i class="fas fa-award text-cyan-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Database Management</h3>
+                    <p class="text-sm text-gray-400 mb-4">Proficient in managing customer databases and ensuring data integrity.</p>
+                    <div class="border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-xs font-mono text-cyan-400">CERTIFIED • 2020</span>
+                    </div>
+                </div>
+
+                <!-- Excel -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-file-excel text-6xl text-green-500"></i>
+                    </div>
+                    <div class="cert-badge p-4 rounded-lg mb-4 inline-block">
+                        <i class="fas fa-award text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">MS Excel Expert</h3>
+                    <p class="text-sm text-gray-400 mb-4">Advanced spreadsheet management, pivot tables, and data analysis.</p>
+                    <div class="border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-xs font-mono text-green-400">CERTIFIED • 2020</span>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-bullhorn text-6xl text-purple-500"></i>
+                    </div>
+                    <div class="cert-badge p-4 rounded-lg mb-4 inline-block">
+                        <i class="fas fa-award text-purple-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Digital Marketing</h3>
+                    <p class="text-sm text-gray-400 mb-4">E-commerce platforms, online selling strategies, and SEO basics.</p>
+                    <div class="border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-xs font-mono text-purple-400">CERTIFIED • 2023</span>
+                    </div>
+                </div>
+
+                <!-- Team Management -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-users text-6xl text-blue-500"></i>
+                    </div>
+                    <div class="cert-badge p-4 rounded-lg mb-4 inline-block">
+                        <i class="fas fa-certificate text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Team Leadership</h3>
+                    <p class="text-sm text-gray-400 mb-4">Supervising teams, performance monitoring, and training sessions.</p>
+                    <div class="border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-xs font-mono text-blue-400">VERIFIED • 2023</span>
+                    </div>
+                </div>
+
+                <!-- Critical Thinking -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-brain text-6xl text-yellow-500"></i>
+                    </div>
+                    <div class="cert-badge p-4 rounded-lg mb-4 inline-block">
+                        <i class="fas fa-lightbulb text-yellow-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Critical Thinking</h3>
+                    <p class="text-sm text-gray-400 mb-4">Problem-solving and analytical decision-making in high-pressure environments.</p>
+                    <div class="border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-xs font-mono text-yellow-400">SOFT SKILL</span>
+                    </div>
+                </div>
+
+                <!-- System Testing -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fas fa-vial text-6xl text-red-400"></i>
+                    </div>
+                    <div class="cert-badge p-4 rounded-lg mb-4 inline-block">
+                        <i class="fas fa-check-double text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">System Testing</h3>
+                    <p class="text-sm text-gray-400 mb-4">Quality assurance and operational workflow testing.</p>
+                    <div class="border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-xs font-mono text-red-400">TECHNICAL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Work Experience</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-cyan-500 to-blue-600 hidden md:block"></div>
+
+                <!-- Job 1 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full" data-aos="fade-right">
+                    <div class="order-1 md:w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-8 h-8 rounded-full border-2 border-cyan-500 hidden md:flex">
+                        <div class="mx-auto w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <div class="order-1 md:w-5/12 w-full glass-card p-6 rounded-2xl border-l-4 border-cyan-500">
+                        <span class="text-cyan-400 text-sm font-bold tracking-wider">2023 - 2024</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Supervisor / Floor Manager</h3>
+                        <h4 class="text-gray-400 font-medium mb-4">Explosion Services</h4>
+                        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                            <li>Overseeing a team of customer service representatives.</li>
+                            <li>Conducting training sessions and monitoring performance metrics.</li>
+                            <li>Implementing strategies to enhance productivity and satisfaction.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="mb-12 flex flex-col md:flex-row-reverse items-center justify-between w-full" data-aos="fade-left">
+                    <div class="order-1 md:w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-8 h-8 rounded-full border-2 border-blue-500 hidden md:flex">
+                        <div class="mx-auto w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <div class="order-1 md:w-5/12 w-full glass-card p-6 rounded-2xl border-r-4 border-blue-500 md:text-right">
+                        <span class="text-blue-400 text-sm font-bold tracking-wider">2020 - 2022</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Processing Team Member</h3>
+                        <h4 class="text-gray-400 font-medium mb-4">Hello International Marketing Solution</h4>
+                        <ul class="list-disc list-inside md:list-none text-gray-400 text-sm space-y-2">
+                            <li>Accurately processing customer orders.</li>
+                            <li>Managing complex databases and information flow.</li>
+                            <li>Ensuring smooth operational execution.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="flex flex-col md:flex-row items-center justify-between w-full" data-aos="fade-right">
+                    <div class="order-1 md:w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-8 h-8 rounded-full border-2 border-purple-500 hidden md:flex">
+                        <div class="mx-auto w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <div class="order-1 md:w-5/12 w-full glass-card p-6 rounded-2xl border-l-4 border-purple-500">
+                        <span class="text-purple-400 text-sm font-bold tracking-wider">2018 - 2019</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Customer Service Representative</h3>
+                        <h4 class="text-gray-400 font-medium mb-4">Hello International Marketing Solution</h4>
+                        <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+                            <li>Handling inbound and outbound customer inquiries.</li>
+                            <li>Resolving issues efficiently and effectively.</li>
+                            <li>Providing excellent service to maintain client retention.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulated Automation: GitHub/Project Activity -->
+    <section id="projects" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12" data-aos="fade-up">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-2">Project Showcase</h2>
+                    <p class="text-gray-400">Live dashboard simulation & Key Projects</p>
+                </div>
+                <div class="flex items-center gap-2 mt-4 md:mt-0">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <span class="text-sm text-green-400 font-mono">System Online</span>
+                </div>
+            </div>
+
+            <!-- Simulated GitHub Activity Graph -->
+            <div class="glass-card p-6 rounded-2xl mb-12" data-aos="zoom-in">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold text-white"><i class="fab fa-github mr-2"></i>Contribution Activity</h3>
+                    <span class="text-xs text-gray-500 font-mono">Last 12 Months</span>
+                </div>
+                <div class="w-full overflow-x-auto">
+                    <div class="flex gap-1 min-w-[600px]" id="github-graph">
+                        <!-- JS will populate this -->
+                    </div>
+                </div>
+                <div class="flex justify-between mt-2 text-xs text-gray-500">
+                    <span>Less</span>
+                    <div class="flex gap-1">
+                        <div class="w-3 h-3 bg-slate-800 rounded-sm"></div>
+                        <div class="w-3 h-3 bg-cyan-900/50 rounded-sm"></div>
+                        <div class="w-3 h-3 bg-cyan-700/50 rounded-sm"></div>
+                        <div class="w-3 h-3 bg-cyan-500/50 rounded-sm"></div>
+                        <div class="w-3 h-3 bg-cyan-400 rounded-sm"></div>
+                    </div>
+                    <span>More</span>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer" data-aos="fade-up">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CRM Dashboard" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-6 z-20 w-full">
+                        <h3 class="text-xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">CRM Optimization</h3>
+                        <p class="text-gray-300 text-sm mb-3">Streamlined customer data processing workflows, reducing ticket resolution time by 20%.</p>
+                        <span class="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full border border-cyan-500/30">Process Improvement</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative rounded-2xl overflow-hidden cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team Training" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 p-6 z-20 w-full">
+                        <h3 class="text-xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">Team Onboarding System</h3>
+                        <p class="text-gray-300 text-sm mb-3">Developed a comprehensive training module for new hires at Explosion Services.</p>
+                        <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-500/30">Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12 text-center" data-aos="fade-up">Professional Feedback</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-8 rounded-2xl relative" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-quote-left text-4xl text-cyan-500/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 mb-6 relative z-10 pt-6">"Sanawer's ability to handle high-pressure situations while maintaining team morale is exceptional. A true asset to any operations team."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center font-bold text-white">JD</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">John Doe</h4>
+                            <p class="text-gray-500 text-xs">Former Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-8 rounded-2xl relative" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-quote-left text-4xl text-cyan-500/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 mb-6 relative z-10 pt-6">"His training sessions were clear, concise, and incredibly effective. Our team's performance metrics improved significantly under his guidance."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center font-bold text-white">AS</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Ali Khan</h4>
+                            <p class="text-gray-500 text-xs">Team Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-8 rounded-2xl relative" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-quote-left text-4xl text-cyan-500/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 mb-6 relative z-10 pt-6">"Highly professional and detail-oriented. Sanawer manages databases with precision and always meets deadlines."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-600 flex items-center justify-center font-bold text-white">SR</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Sara R.</h4>
+                            <p class="text-gray-500 text-xs">Operations Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="glass rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10" data-aos="fade-up">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-serif font-bold text-white mb-4">Let's Work Together</h2>
+                    <p class="text-gray-400">Have a project in mind? Send me a message.</p>
+                </div>
+
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-300">Name</label>
+                            <input type="text" required class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" placeholder="Your Name">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-gray-300">Email</label>
+                            <input type="email" required class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-gray-300">Subject</label>
+                        <input type="text" required class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" placeholder="Project Inquiry">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-gray-300">Message</label>
+                        <textarea rows="4" required class="w-full bg-slate-800/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:-translate-y-1 flex justify-center items-center gap-2 group">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="hidden text-center py-10">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-bounce">
+                        <i class="fas fa-check text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                    <p class="text-gray-400">Thank you for reaching out. I'll get back to you shortly.</p>
+                    <button onclick="resetForm()" class="mt-6 text-cyan-400 hover:text-cyan-300 underline">Send another message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-2xl font-serif font-bold text-white tracking-tighter">SS<span class="text-cyan-400">.</span></span>
+                <p class="text-gray-500 text-sm mt-2">&copy; 2024 Sanawer Sohail. All rights reserved.</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <a href="mailto:sanawersohail779@gmail.com" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-gray-400 text-sm"><i class="fas fa-phone-alt mr-2 text-cyan-500"></i>+92 343 8039002</p>
+                <p class="text-gray-400 text-sm"><i class="fas fa-map-marker-alt mr-2 text-cyan-500"></i>Karachi, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation Library
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+
+        // Typewriter Effect
+        const textElement = document.getElementById('typewriter');
+        const phrases = ["Customer Service Expert.", "Team Supervisor.", "Operations Specialist.", "Digital Marketer."];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
+
+        // Simulated GitHub Activity Graph Generator
+        const graphContainer = document.getElementById('github-graph');
+        const weeks = 52;
+        const days = 7;
+        
+        for (let w = 0; w < weeks; w++) {
+            const weekCol = document.createElement('div');
+            weekCol.className = 'flex flex-col gap-1';
+            
+            for (let d = 0; d < days; d++) {
+                const dayBox = document.createElement('div');
+                // Randomize activity level
+                const rand = Math.random();
+                let bgClass = 'bg-slate-800'; // Level 0
+                
+                if (rand > 0.9) bgClass = 'bg-cyan-400'; // High activity
+                else if (rand > 0.7) bgClass = 'bg-cyan-500/50';
+                else if (rand > 0.5) bgClass = 'bg-cyan-700/50';
+                
+                dayBox.className = `w-3 h-3 rounded-sm ${bgClass} hover:ring-2 hover:ring-white transition-all cursor-pointer`;
+                dayBox.title = `${Math.floor(rand * 10)} contributions`;
+                weekCol.appendChild(dayBox);
+            }
+            graphContainer.appendChild(weekCol);
+        }
+
+        // Contact Form Handling
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('successMessage');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate API call
+            const btn = form.querySelector('button');
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMsg.classList.remove('hidden');
+                btn.innerHTML = originalContent;
+                btn.disabled = false;
+            }, 1500);
+        });
+
+        function resetForm() {
+            form.reset();
+            successMsg.classList.add('hidden');
+            form.style.display = 'block';
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.replace('h-20', 'h-16');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.replace('h-16', 'h-20');
+            }
+        });
+    </script>
+</body>
+</html>
